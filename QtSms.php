@@ -2,8 +2,6 @@
 
 namespace Bankiru\Sms\QtSms;
 
-use Psr\Log\InvalidArgumentException;
-
 final class QtSms
 {
     private $post_data = [];
@@ -32,12 +30,12 @@ final class QtSms
         $urlData = parse_url($this->url);
 
         if (false === $urlData) {
-            throw new InvalidArgumentException('Invalid url: ' . $this->url);
+            throw new \InvalidArgumentException('Invalid url: ' . $this->url);
         }
 
         foreach (['host', 'path', 'scheme'] as $property) {
             if (!array_key_exists($property, $urlData)) {
-                throw new InvalidArgumentException('Invalid url: ' . $this->url);
+                throw new \InvalidArgumentException('Invalid url: ' . $this->url);
             }
         }
 
