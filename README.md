@@ -23,7 +23,7 @@ class MySms implements  ShortMessageInterface {
 }
 
 $transport = new QtSmsTransport(
-    new QtSms('user', 'pass', 'http://qtsms/'),
+    new QtSms('user', 'pass', 'https://service.qtelecom.ru/public/http/'),
     'friendly_man'
 );
 $transport->send(new MySms('1234567890', 'message body'));
@@ -55,7 +55,7 @@ sms_delivery:
 qt_sms:
     login: user
     password: pass
-    url: http://qtsms
+    url: https://service.qtelecom.ru/public/http/
     sender: friendly_man
 ```
 

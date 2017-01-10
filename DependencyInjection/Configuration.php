@@ -15,7 +15,7 @@ final class Configuration implements ConfigurationInterface
 
         $root->children()->scalarNode('login')->isRequired();
         $root->children()->scalarNode('password')->isRequired();
-        $root->children()->scalarNode('url')->defaultValue('https://bulk.sms-online.com/');
+        $root->children()->scalarNode('url')->defaultValue('https://service.qtelecom.ru/public/http/');
         $root->children()->scalarNode('sender')->isRequired();
 
         return $builder;
