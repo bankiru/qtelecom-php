@@ -105,7 +105,7 @@ final class QtSms
             "User-Agent: AISMS PHP class" . $nn .
             $nn .
             $PostData;
-        flush();
+
         if (($fp = @fsockopen($this->getUrl(), $this->getPort(), $errno, $errstr, 30)) !== false) {
             fputs($fp, $send);
             $header = '';
